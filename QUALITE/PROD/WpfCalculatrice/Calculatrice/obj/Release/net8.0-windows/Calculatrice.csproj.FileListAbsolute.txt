@@ -1,0 +1,12 @@
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\bin\Release\net8.0-windows\Calculatrice.deps.json
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\bin\Release\net8.0-windows\Calculatrice.dll
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\bin\Release\net8.0-windows\Calculatrice.pdb
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\Calculatrice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\Calculatrice.AssemblyInfoInputs.cache
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\Calculatrice.AssemblyInfo.cs
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\Calculatrice.csproj.CoreCompileInputs.cache
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\Calculatrice.sourcelink.json
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\Calculatrice.dll
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\refint\Calculatrice.dll
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\Calculatrice.pdb
+C:\Users\melih\Desktop\Travaux à faire\QUALITE\PROD\WpfCalculatrice\Calculatrice\obj\Release\net8.0-windows\ref\Calculatrice.dll
