@@ -1,5 +1,5 @@
 
-function create(tag, container, text=null) {
+function create(tag, container, text = null) {
 	let element = document.createElement(tag)
 	if (text)
 		element.innerText = text
@@ -31,31 +31,31 @@ function display(shoe) {
 	let categoryP = create("p", article, categories[shoe.category].name)
 	categoryP.classList.add("category")
 
-	article.style.backgroundColor = "#"+colors[shoe.color].hex
+	article.style.backgroundColor = "#" + colors[shoe.color].hex
 }
 
 
 const shoesContainer = document.querySelector("#shoes")
 
-axios.get("http://51.83.36.122:8080/categories").then( responseCategories => {
+axios.get("http://51.83.36.122:8080/categories").then(responseCategories => {
 	categories = responseCategories.data
 
 	let categoriesSelect = document.querySelector("#form select[name=category]")
-	categories.forEach( category => {
+	categories.forEach(category => {
 		let option = create("option", categoriesSelect, category.name)
 		option.value = category.id
 	})
 
-	axios.get("http://51.83.36.122:8080/colors").then( responseColors => {
+	axios.get("http://51.83.36.122:8080/colors").then(responseColors => {
 		colors = responseColors.data
 
 		let colorsSelect = document.querySelector("#form select[name=color]")
-		colors.forEach( color => {
+		colors.forEach(color => {
 			let option = create("option", colorsSelect, color.name)
 			option.value = color.id
 		})
 
-		axios.get("http://51.83.36.122:8080/shoes").then( responseShoes => {
+		axios.get("http://51.83.36.122:8080/shoes").then(responseShoes => {
 			responseShoes.data.forEach(display)
 		})
 	})
@@ -76,14 +76,14 @@ addForm.querySelector("button").addEventListener("click", event => {
 	let size = addForm.querySelector("input[name=size]").value
 
 	axios.post("http://51.83.36.122:8080/add", {
-		brand : brand,
-		descr : descr,
-		seller : seller,
-		price : price,
-		category : category,
-		color : color,
-		size : size
-	}).then (response => {
+		brand: brand,
+		descr: descr,
+		seller: seller,
+		price: price,
+		category: category,
+		color: color,
+		size: size
+	}).then(response => {
 		if (!response.data.errors)
 			display(response.data)
 		else

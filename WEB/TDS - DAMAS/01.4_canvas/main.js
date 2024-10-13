@@ -10,31 +10,31 @@ const c = canvas.getContext("2d")
 
 const balls = []
 
-for(let i=0; i<10; i++) {
+for (let i = 0; i < 10; i++) {
 	balls.push({
-		x: 20+Math.random()*(w-40),
-		y: 20+Math.random()*(h-40),
-		r: 10+Math.random()*10,
-		vx: Math.random()*6-3,
-		vy: Math.random()*6-3,
+		x: 20 + Math.random() * (w - 40),
+		y: 20 + Math.random() * (h - 40),
+		r: 10 + Math.random() * 10,
+		vx: Math.random() * 6 - 3,
+		vy: Math.random() * 6 - 3,
 	})
 }
 
 
 const points = []
 
-document.querySelector("body").addEventListener("mousemove", function(event) {
+document.querySelector("body").addEventListener("mousemove", function (event) {
 	points.push({ x: event.pageX, y: event.pageY })
 })
 
 
 
-setInterval(function() {
-	c.clearRect(0,0, w,h)
+setInterval(function () {
+	c.clearRect(0, 0, w, h)
 
 	c.beginPath()
-	c.moveTo(points[0].x,points[0].y)
-	for(let point of points)
+	c.moveTo(points[0].x, points[0].y)
+	for (let point of points)
 		c.lineTo(point.x, point.y)
 	c.strokeStyle = "black"
 	c.lineWidth = 2
@@ -43,9 +43,9 @@ setInterval(function() {
 
 
 
-	for(let ball of balls) {
+	for (let ball of balls) {
 		c.beginPath()
-		c.arc(ball.x, ball.y, ball.r, 0, Math.PI*2)
+		c.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2)
 		c.fillStyle = "orange"
 		c.strokeStyle = "indigo"
 		c.lineWidth = 10
@@ -56,14 +56,14 @@ setInterval(function() {
 		ball.x += ball.vx
 		ball.y += ball.vy
 
-		if (ball.x-ball.r <= 0 || ball.x+ball.r > w) {
+		if (ball.x - ball.r <= 0 || ball.x + ball.r > w) {
 			ball.x -= ball.vx
 			ball.vx *= -0.9 // Amorti
 		}
-		if (ball.y-ball.r <= 0 || ball.y+ball.r > h) {
+		if (ball.y - ball.r <= 0 || ball.y + ball.r > h) {
 			ball.y -= ball.vy
 			ball.vy *= -0.9 // Amorti
-		}		
+		}
 	}
 
 

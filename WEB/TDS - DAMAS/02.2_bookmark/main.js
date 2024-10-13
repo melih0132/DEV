@@ -1,4 +1,4 @@
-function create(tag, container, text=null) {
+function create(tag, container, text = null) {
 	let element = document.createElement(tag)
 	if (text)
 		element.innerText = text
@@ -22,11 +22,11 @@ const links = [
 
 const table = document.querySelector("table#bookmark")
 
-links.forEach( link => {
+links.forEach(link => {
 
-	let tr = create("tr",table)
+	let tr = create("tr", table)
 	create("td", tr, link.title)
-	let linkTD = create("td",tr)
+	let linkTD = create("td", tr)
 	let anchor = create("a", linkTD, link.url)
 	anchor.href = link.url
 

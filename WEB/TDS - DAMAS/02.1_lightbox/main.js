@@ -1,4 +1,4 @@
-function create(tag, container, text=null) {
+function create(tag, container, text = null) {
 	let element = document.createElement(tag)
 	if (text)
 		element.innerText = text
@@ -8,10 +8,10 @@ function create(tag, container, text=null) {
 
 const body = document.querySelector("body")
 
-document.querySelectorAll(".lightbox").forEach(function(image) {
+document.querySelectorAll(".lightbox").forEach(function (image) {
 
 
-	image.addEventListener("click", function() {
+	image.addEventListener("click", function () {
 		let bg = create("div", body)
 		bg.id = "bg"
 
@@ -23,25 +23,25 @@ document.querySelectorAll(".lightbox").forEach(function(image) {
 
 		let closeButton = create("div", box, "X")
 		closeButton.id = "close"
-		box.addEventListener("click", function(event) {
+		box.addEventListener("click", function (event) {
 			event.stopPropagation()
 		})
 
 		function remove() {
 			box.classList.add("out")
-			setTimeout(function() {
-				bg.remove()			
+			setTimeout(function () {
+				bg.remove()
 			}, 800)
 		}
 
-		closeButton.addEventListener("click", function() {
+		closeButton.addEventListener("click", function () {
 			remove()
 		})
-		bg.addEventListener("click", function(event) {
+		bg.addEventListener("click", function (event) {
 			remove()
 		})
-		body.addEventListener("keyup", function(event) {
-			if(event.key == "Escape")
+		body.addEventListener("keyup", function (event) {
+			if (event.key == "Escape")
 				remove()
 		})
 
