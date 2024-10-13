@@ -1,7 +1,10 @@
+* {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 img.lightbox {
 	width: 300px;
 }
-
 
 #bg {
 	position: fixed;
@@ -9,7 +12,7 @@ img.lightbox {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(255, 127, 0, .7);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 #box {
