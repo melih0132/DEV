@@ -1,22 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const likeButton = document.getElementById("like-button");
-    const likeCount = document.getElementById("like-count");
+const like = document.getElementById('likeButton');
 
-    axios.get('like.php')
-        .then(function(response) {
-            likeCount.textContent = response.data.likes;
-        })
-        .catch(function(error) {
-            console.error('Erreur lors du chargement des likes:', error);
-        });
+let url = 'like.php';
 
-    likeButton.addEventListener("click", function() {
-        axios.get('like.php?action=like')
-            .then(function(response) {
-                likeCount.textContent = response.data.likes;
-            })
-            .catch(function(error) {
-                console.error('Erreur lors de l\'incrément des likes:', error);
-            });
-    });
+sendLike();
+like.addEventListener('click', function () {
+    sendLike(1);
 });
+
+async function sendLike(nb = 0) {
+    axios.get(url, {
+        params: {
+            likes: nb
+        }
+    })
+        .then(function (response) {
+            console.log(response);
+            document.getElementById('likeCount').innerText = response.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+}
