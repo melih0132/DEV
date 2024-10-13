@@ -1,8 +1,20 @@
-axios.get("like.php")
-.then(function(response) {
-    element.innerHTML = response.data.value
+const like = document.getElementById('likeButton');
+
+const url = 'like.php';
+
+like.addEventListener('click', function () {
+    sendLike();
 });
 
-const like = document.querySelector('#like');
-document.body.appendChild(like);
-
+async function sendLike() {
+    fetch(url, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(function (response) {
+        console.log(response);
+    }).catch(function (error) {
+        console.log(error);
+    });
+}
